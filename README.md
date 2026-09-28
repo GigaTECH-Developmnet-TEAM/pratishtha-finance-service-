@@ -1,8 +1,8 @@
 # Pratishtha Finance Services
 
-**Single-page marketing & lead-generation website for a loan DSA (Direct Selling Agent) business.**
+**Single-page marketing & lead-generation website for a loan services business.**
 
-Live domain: **[pratishtha.pro](https://pratishtha.pro)**
+Live domain: **[pratishtha.pro](https://www.pratishtha.pro)**
 Stack: Vanilla HTML / CSS / JS — zero dependencies, zero build step
 Status: Production-ready
 
@@ -27,7 +27,7 @@ Status: Production-ready
 
 ## Overview
 
-Pratishtha Finance Services is an MSME-registered DSA in Maharajganj, Uttar Pradesh, that connects customers to loan products across **116+ bank and NBFC partners**. This site is the company's digital storefront: it explains loan products, runs eligibility and EMI calculators, and converts visitors into leads via WhatsApp — with no backend, database, or server required.
+Pratishtha Finance Services is an MSME-registered loan services firm in Maharajganj, Uttar Pradesh, that connects customers to loan products across **116+ bank and NBFC partners**. This site is the company's digital storefront: it explains loan products, runs eligibility and EMI calculators, and converts visitors into leads via WhatsApp — with no backend, database, or server required.
 
 ## Tech Stack
 
@@ -69,7 +69,7 @@ Internally, the single file is organized as:
   <section id="tracking">  Application status lookup
   <section id="savings">   RD / savings plan calculator + enrollment
   <section id="partners">  116+ bank/NBFC logos, filterable
-  <section id="join">      Agent / DSA / referral signup
+  <section id="join">      Associate / referral / branch partner signup
   <section id="reviews">
   <section id="faq">       25 Q&As
   <section id="knowledge">
@@ -91,7 +91,7 @@ Internally, the single file is organized as:
 - **Animated Counters** — `IntersectionObserver`-driven count-up animation for hero stats
 - **Modals & Toasts** — `openModal()`, `closeModal()`, `showToast()` for privacy policy, disclaimers, and form feedback
 - **Aadhaar Input Formatting** — `formatAadhaar()` auto-spaces Aadhaar numbers as the user types
-- **Photo Preview** — `previewPartnerPhoto()` lets agent applicants preview an uploaded photo before submitting
+- **Photo Preview** — `previewPartnerPhoto()` lets associate applicants preview an uploaded photo before submitting
 
 ## Page Sections
 
@@ -107,7 +107,7 @@ Internally, the single file is organized as:
 | `#tracking` | Application status lookup |
 | `#savings` | RD/savings plan calculator + enrollment |
 | `#partners` | Bank/NBFC partner directory, filterable |
-| `#join` | Become a DSA / referral / branch partner |
+| `#join` | Become an associate / referral / branch partner |
 | `#reviews` | Customer reviews |
 | `#faq` | 25 FAQs (also exposed as structured data) |
 | `#knowledge` | Financial literacy content |
@@ -144,11 +144,27 @@ This is a static file — deploy it anywhere that serves static assets (Netlify,
 
 1. Upload `pratishtha-finance.html` to the host as `index.html`
 2. Extract the `robots.txt` / `sitemap.xml` / `llms.txt` content from the comment block at the top of the file into three separate files at the domain root:
-   - `https://pratishtha.pro/robots.txt`
-   - `https://pratishtha.pro/sitemap.xml`
-   - `https://pratishtha.pro/llms.txt`
+   - `https://www.pratishtha.pro/robots.txt`
+   - `https://www.pratishtha.pro/sitemap.xml`
+   - `https://www.pratishtha.pro/llms.txt`
 3. Point DNS for `pratishtha.pro` at the host
 4. Confirm `og-image.jpg` and `logo.png` exist at the paths referenced in the `<head>` meta tags
+
+## WWW Redirect
+
+Canonical address is **https://www.pratishtha.pro/**. Redirect the bare `pratishtha.pro` to it with a 301 (host setting "redirect apex to www", or in `.htaccess`: `RewriteCond %{HTTP_HOST} ^pratishtha\.pro$ [NC]` then `RewriteRule ^(.*)$ https://www.pratishtha.pro/$1 [L,R=301]`). In Search Console, add a **Domain property** so both versions report together.
+
+## Search Engine Submission
+
+One-time setup that covers every major engine:
+
+| Step | Covers |
+|---|---|
+| Google Search Console: verify, submit `sitemap.xml`, Request Indexing | Google Search, Gemini, AI Overviews |
+| Bing Webmaster Tools: import from Search Console | Bing, Yahoo, DuckDuckGo, Copilot, ChatGPT Search, Meta AI |
+| Yandex Webmaster: add site + sitemap | Yandex |
+| IndexNow: key file at root + one ping URL | Bing, Yandex, Naver (instant) |
+| Google Business Profile: name exactly "Pratishtha Finance Services" | Brand-name search, Maps, local pack |
 
 ## Post-Launch Checklist
 
@@ -163,14 +179,19 @@ This is a static file — deploy it anywhere that serves static assets (Netlify,
 
 | | |
 |---|---|
-| Legal status | MSME Registered Direct Selling Agent (DSA) |
+| Legal status | MSME Registered loan services firm |
 | Phone / WhatsApp | +91 7233023547 · +91 6306864182 |
 | Email | pratishthafinance@gmail.com |
 | Address | Dhanna Nayak, Partawal, Maharajganj, Uttar Pradesh 273301 |
 | Hours | Mon–Sat, 9:00 AM – 7:00 PM |
-| Loan range | ₹10,000 – ₹2.5 Crore |
+| Service area | All India · Purvanchal focus |
+| Loan range | ₹10,000 – ₹5 Crore |
 | Rate | From 7.35% p.a. |
 | Products | Business, Personal, Home, LAP, MSME, Vehicle, Education, Gold Loans |
+
+## Target Market
+
+Serves customers **all over India**, with **Purvanchal** (Gorakhpur, Maharajganj, Deoria, Kushinagar, Basti, Azamgarh, Varanasi, Ballia, Ghazipur, Jaunpur and nearby districts) as the highlighted focus region in titles, keywords, hero text, and schema `areaServed`.
 
 ## Changelog
 
