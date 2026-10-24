@@ -1,8 +1,0 @@
-/* TEAM */
-Founder: Karan Gautam
-Co-Founder: Sarita Kumari
-Site: Pratishtha Finance Services, Maharajganj, Uttar Pradesh, India
-Contact: pratishthafinance@gmail.com
-/* SITE */
-Language: English, Hindi
-Standards: HTML5, CSS3, JSON-LD
