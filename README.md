@@ -45,7 +45,12 @@ No package manager, no build pipeline. Open the file or deploy it as a static as
 ## Project Structure
 
 ```
-pratishtha-finance.html   ← everything: <head> metadata, <style>, markup, <script>
+site/                     ← UPLOAD THIS FOLDER (pratishtha-pro-website.zip)
+  index.html, 404.html, .htaccess
+  images/                 ← logo, founder photos, partner logo
+  og-image.jpg, logo.png, favicons, icons, site.webmanifest
+  robots.txt, sitemap.xml, llms.txt, <IndexNow key>.txt
+pratishtha-finance.html   ← single-file preview (images embedded) – open anywhere
 README.md                 ← this file
 ```
 
@@ -73,7 +78,7 @@ Internally, the single file is organized as:
   <section id="partners">  116+ bank/NBFC logos, filterable
   <section id="join">      Associate / referral / branch partner signup
   <section id="reviews">
-  <section id="faq">       27 Q&As
+  <section id="faq">       29 Q&As
   <section id="knowledge">
   <section id="trust">
   <section id="contact">
@@ -97,7 +102,8 @@ Internally, the single file is organized as:
 
 ## PFS EMI Card & Gold Loan
 
-- **Hero:** two-column layout with an animated illustration (PFS EMI Card, shopping bag, growth chart, gold bars and coins) built as inline SVG, so there are no image files to host and nothing to load. To use real photos instead, replace the `.hero-visual` block.
+- **Hero:** two-column layout with the real **PFS Shopping Card (virtual card, not a credit card)** rebuilt in HTML/CSS with the company logo and a working QR (points to `/#pfs-card`), plus shopping bag, gold bars and coins as SVG. Card holder / number are placeholders – never real customer data.
+- **Service Areas (`#areas`):** All-India coverage with Purvanchal highlighted.
 - **PFS EMI Card (`#pfs-card`):** emergency loan up to ₹5,000, shopping on EMI, loan payment, quick apply, clear terms and more. The Apply button pre-selects "PFS EMI Card" in the loan form via `pfsApply()`.
 - **Gold Loan (`#gold-loan`):** key figures, benefits and a **Gold Loan Estimator** (`calcGold()`): weight x purity x today's 24K rate x 75% LTV, capped at ₹1 Crore. The user types the day's gold rate, so no price is hard-coded.
 - All new text is bilingual (EN/HI) through the `translations` object.
@@ -121,7 +127,7 @@ Internally, the single file is organized as:
 | `#partners` | Bank/NBFC partner directory, filterable |
 | `#join` | Become an associate / referral / branch partner |
 | `#reviews` | Customer reviews |
-| `#faq` | 27 FAQs (also exposed as structured data) |
+| `#faq` | 29 FAQs (also exposed as structured data) |
 | `#knowledge` | Financial literacy content |
 | `#trust` | Trust signals / disclaimers |
 | `#contact` | Phone, WhatsApp, email, address, map |
@@ -144,7 +150,7 @@ The `translations` object plus `setLanguage(lang)` swap all UI copy between Engl
 ## SEO & Discoverability
 
 - Full metadata: `<title>`, meta description/keywords, canonical URL, `hreflang` (en/hi/x-default), Open Graph, Twitter Card
-- Structured data (JSON-LD): `FinancialService`, `BreadcrumbList`, and a **static** `FAQPage` (27 entries) — deliberately kept static rather than JS-injected so crawlers that don't execute JavaScript can still read it
+- Structured data (JSON-LD): `FinancialService`, `BreadcrumbList`, and a **static** `FAQPage` (29 entries) — deliberately kept static rather than JS-injected so crawlers that don't execute JavaScript can still read it
 - AI-crawler access explicitly permitted: GPTBot (ChatGPT), Google-Extended (Gemini), PerplexityBot, ClaudeBot, CCBot
 - `llms.txt` reference block for AI-assistant discoverability
 
@@ -212,3 +218,5 @@ Serves customers **all over India**, with **Purvanchal** (Gorakhpur, Maharajganj
 **AI-crawler SEO** — `FAQPage` JSON-LD moved from JS-injected to static `<head>` markup (non-JS crawlers such as GPTBot/ClaudeBot were missing it entirely); `robots.txt`/`llms.txt` reference blocks added with explicit AI-crawler allow rules.
 
 **Bug fix** — Partner-logo `onerror` fallback handlers referenced `this.nextSibling`, which resolves to a whitespace text node (not the fallback `<div>`) due to the newline between tags in source. This threw `Cannot set properties of undefined (setting 'display')` on every logo load failure, across all 114 logo `<img>` tags. Fixed by switching to `this.nextElementSibling`, which correctly skips text nodes and targets the fallback element.
+
+**Pro build** — real card artwork, Service Areas section, OG image, favicons/manifest, `.htaccess` (https + www redirect, gzip, caching, security headers), 404 page, IndexNow key, accessibility pass (labels, landmarks, contrast, keyboard FAQ). Lighthouse: Performance 94, Accessibility ~98, Best Practices 96, SEO 100.
