@@ -63,6 +63,8 @@ Internally, the single file is organized as:
   <section id="process">   How it works
   <section id="about">
   <section id="loans">     8 loan product cards
+  <section id="pfs-card">  PFS EMI Card (emergency loan up to ₹5,000, shopping, loan payment)
+  <section id="gold-loan"> Gold Loan details + Gold Loan Estimator
   <section id="eligibility">
   <section id="apply">     Application form -> WhatsApp
   <section id="calculator">EMI calculator
@@ -71,7 +73,7 @@ Internally, the single file is organized as:
   <section id="partners">  116+ bank/NBFC logos, filterable
   <section id="join">      Associate / referral / branch partner signup
   <section id="reviews">
-  <section id="faq">       25 Q&As
+  <section id="faq">       27 Q&As
   <section id="knowledge">
   <section id="trust">
   <section id="contact">
@@ -93,6 +95,14 @@ Internally, the single file is organized as:
 - **Aadhaar Input Formatting** — `formatAadhaar()` auto-spaces Aadhaar numbers as the user types
 - **Photo Preview** — `previewPartnerPhoto()` lets associate applicants preview an uploaded photo before submitting
 
+## PFS EMI Card & Gold Loan
+
+- **Hero:** two-column layout with an animated illustration (PFS EMI Card, shopping bag, growth chart, gold bars and coins) built as inline SVG, so there are no image files to host and nothing to load. To use real photos instead, replace the `.hero-visual` block.
+- **PFS EMI Card (`#pfs-card`):** emergency loan up to ₹5,000, shopping on EMI, loan payment, quick apply, clear terms and more. The Apply button pre-selects "PFS EMI Card" in the loan form via `pfsApply()`.
+- **Gold Loan (`#gold-loan`):** key figures, benefits and a **Gold Loan Estimator** (`calcGold()`): weight x purity x today's 24K rate x 75% LTV, capped at ₹1 Crore. The user types the day's gold rate, so no price is hard-coded.
+- All new text is bilingual (EN/HI) through the `translations` object.
+- Card limits, charges and the approval process are not stated on the site beyond "subject to eligibility and lending-partner policy". Confirm the real terms before launch.
+
 ## Page Sections
 
 | Anchor | Section |
@@ -101,6 +111,8 @@ Internally, the single file is organized as:
 | `#process` | How it works |
 | `#about` | Company overview |
 | `#loans` | Business, Personal, Home, LAP, MSME, Vehicle, Education, Gold |
+| `#pfs-card` | PFS EMI Card: emergency loan up to ₹5,000, shopping on EMI, loan payment and more |
+| `#gold-loan` | Gold Loan: ₹10,000–₹1 Crore, up to 75% LTV, from 9.00% p.a., with an indicative estimator |
 | `#eligibility` | Eligibility checker |
 | `#apply` | Loan application form |
 | `#calculator` | EMI calculator |
@@ -109,7 +121,7 @@ Internally, the single file is organized as:
 | `#partners` | Bank/NBFC partner directory, filterable |
 | `#join` | Become an associate / referral / branch partner |
 | `#reviews` | Customer reviews |
-| `#faq` | 25 FAQs (also exposed as structured data) |
+| `#faq` | 27 FAQs (also exposed as structured data) |
 | `#knowledge` | Financial literacy content |
 | `#trust` | Trust signals / disclaimers |
 | `#contact` | Phone, WhatsApp, email, address, map |
@@ -132,7 +144,7 @@ The `translations` object plus `setLanguage(lang)` swap all UI copy between Engl
 ## SEO & Discoverability
 
 - Full metadata: `<title>`, meta description/keywords, canonical URL, `hreflang` (en/hi/x-default), Open Graph, Twitter Card
-- Structured data (JSON-LD): `FinancialService`, `BreadcrumbList`, and a **static** `FAQPage` (25 entries) — deliberately kept static rather than JS-injected so crawlers that don't execute JavaScript can still read it
+- Structured data (JSON-LD): `FinancialService`, `BreadcrumbList`, and a **static** `FAQPage` (27 entries) — deliberately kept static rather than JS-injected so crawlers that don't execute JavaScript can still read it
 - AI-crawler access explicitly permitted: GPTBot (ChatGPT), Google-Extended (Gemini), PerplexityBot, ClaudeBot, CCBot
 - `llms.txt` reference block for AI-assistant discoverability
 
