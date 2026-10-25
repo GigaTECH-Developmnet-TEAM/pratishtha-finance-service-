@@ -1376,6 +1376,23 @@ a[href^="tel:"],a[href^="mailto:"]{display:inline-block;min-height:24px;line-hei
 .mobile-menu a.sub{padding-left:26px;font-size:.82rem;opacity:.9}
 .loan-card:target,#gold-loan-card:target{box-shadow:0 0 0 3px #f0c040,0 18px 40px rgba(26,39,68,.18)}
 .loan-card{scroll-margin-top:90px}
+#scrollProg{position:fixed;top:0;left:0;height:3px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:linear-gradient(90deg,#f0c040,#d4a017);z-index:2000;pointer-events:none}
+#toTop{position:fixed;right:18px;bottom:150px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(212,160,23,.6);background:#1a2744;color:#f0c040;font-size:1.1rem;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:990;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+#toTop.show{opacity:1;visibility:visible;transform:none}
+.loan-filter{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 auto 26px}
+.loan-filter button{border:1px solid rgba(26,39,68,.18);background:#fff;color:#1a2744;padding:8px 16px;border-radius:50px;font:600 .8rem Poppins,Arial,sans-serif;cursor:pointer;transition:.2s}
+.loan-filter button[aria-pressed="true"]{background:#1a2744;color:#f0c040;border-color:#1a2744}
+.loan-card.hide{display:none}
+#actionBar{display:none}
+@media(max-width:700px){
+ #actionBar{display:grid;grid-template-columns:1fr 1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:1001;background:#16213d;border-top:2px solid rgba(212,160,23,.5);padding:8px 8px calc(8px + env(safe-area-inset-bottom));gap:8px;box-shadow:0 -8px 24px rgba(0,0,0,.3)}
+ #actionBar a{display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;border-radius:12px;font:600 .8rem Poppins,Arial,sans-serif;text-decoration:none;color:#fff;background:rgba(255,255,255,.1)}
+ #actionBar a.wa{background:#167a4a}#actionBar a.ap{background:#f0c040;color:#1a2744}
+ .wa-float,.pf-call{display:none!important}
+ #toTop{bottom:80px;right:12px}
+ body{padding-bottom:68px}
+}
+@media print{#actionBar,#toTop,#scrollProg{display:none}}
 </style>
 <meta name="geo.country" content="IN"><meta name="rating" content="general"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable summary"><link rel="author" href="/humans.txt">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "@id": "https://www.pratishtha.pro/#service-business-loan", "name": "Business Loan", "serviceType": "Business Loan", "description": "Business loans for working capital, expansion and equipment, ₹10,000 to ₹5 Crore, via 116+ bank and NBFC partners.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-personal-loan", "name": "Personal Loan", "serviceType": "Personal Loan", "description": "Personal loans for medical, wedding, travel and other needs, with simple documentation.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-home-loan", "name": "Home Loan", "serviceType": "Home Loan", "description": "Home loans for purchase, construction and renovation from leading banks and housing finance companies.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-loan-against-property", "name": "Loan Against Property", "serviceType": "Loan Against Property", "description": "Loan against property (LAP) for business and personal funding at competitive rates.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-msme-loan", "name": "MSME Loan", "serviceType": "MSME Loan", "description": "MSME loans for small and medium businesses, indicative rates from 7.35% p.a.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-vehicle-loan", "name": "Vehicle Loan", "serviceType": "Vehicle Loan", "description": "Car, two-wheeler and commercial vehicle loans.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-education-loan", "name": "Education Loan", "serviceType": "Education Loan", "description": "Education loans for studies in India and abroad.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-gold-loan", "name": "Gold Loan", "serviceType": "Gold Loan", "description": "Gold loan from ₹10,000 up to ₹1 Crore, up to 75% of gold value, from 9.00% p.a.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#gold-loan", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-pfs-emi-card", "name": "PFS EMI Card", "serviceType": "PFS EMI Card", "description": "Virtual PFS Shopping Card (not a credit card): emergency loan up to ₹5,000, shopping on EMI and loan payment, subject to lending-partner approval.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#pfs-card", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}]}</script>
@@ -1401,6 +1418,9 @@ a[href^="tel:"],a[href^="mailto:"]{display:inline-block;min-height:24px;line-hei
   </defs>
 </svg>
 
+<div id="scrollProg" aria-hidden="true"></div>
+<button id="toTop" type="button" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div id="actionBar" role="navigation" aria-label="Quick actions"><a href="tel:+917233023547">📞 Call</a><a class="wa" href="https://wa.me/917233023547?text=Namaste!%20Mujhe%20loan%20chahiye" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a><a class="ap" href="#apply">📝 Apply</a></div>
 <!-- WA FLOAT -->
 <a href="https://wa.me/917233023547?text=Namaste!%20Mujhe%20loan%20chahiye" class="wa-float" target="_blank" rel="noopener noreferrer">💬</a>
 
@@ -1639,8 +1659,9 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
     <h2 data-i18n="products.title" class="section-title">Our Loan Services</h2>
     <div class="divider divider-center"></div>
   </div>
+  <div class="loan-filter" role="group" aria-label="Filter loans"><button type="button" data-cat="all" aria-pressed="true">All</button><button type="button" data-cat="business" aria-pressed="false">Business</button><button type="button" data-cat="personal" aria-pressed="false">Personal &amp; Vehicle</button><button type="button" data-cat="property" aria-pressed="false">Home &amp; Property</button><button type="button" data-cat="gold" aria-pressed="false">Gold</button></div>
   <div class="loans-grid">
-    <div class="loan-card" id="business-loan">
+    <div class="loan-card" id="business-loan" data-cat="business">
       <div class="loan-icon">🏢</div>
       <div class="loan-name">Business Loan</div>
       <div class="loan-amount">₹50,000 – ₹5 Crore</div>
@@ -1655,7 +1676,7 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
       </div>
       <a href="#apply" class="btn-apply-card">Apply Now →</a>
     </div>
-    <div class="loan-card" id="personal-loan">
+    <div class="loan-card" id="personal-loan" data-cat="personal">
       <div class="loan-icon">👤</div>
       <div class="loan-name">Personal Loan</div>
       <div class="loan-amount">₹25,000 – ₹40 Lakh</div>
@@ -1670,7 +1691,7 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
       </div>
       <a href="#apply" class="btn-apply-card">Apply Now →</a>
     </div>
-    <div class="loan-card" id="home-loan">
+    <div class="loan-card" id="home-loan" data-cat="property">
       <div class="loan-icon">🏠</div>
       <div class="loan-name">Home Loan</div>
       <div class="loan-amount">₹5 Lakh – ₹5 Crore</div>
@@ -1685,7 +1706,7 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
       </div>
       <a href="#apply" class="btn-apply-card">Apply Now →</a>
     </div>
-    <div class="loan-card" id="loan-against-property">
+    <div class="loan-card" id="loan-against-property" data-cat="property">
       <div class="loan-icon">🏘️</div>
       <div class="loan-name">Loan Against Property</div>
       <div class="loan-amount">₹10 Lakh – ₹5 Crore</div>
@@ -1700,7 +1721,7 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
       </div>
       <a href="#apply" class="btn-apply-card">Apply Now →</a>
     </div>
-    <div class="loan-card" id="msme-loan">
+    <div class="loan-card" id="msme-loan" data-cat="business">
       <div class="loan-icon">🏭</div>
       <div class="loan-name">MSME Loan</div>
       <div class="loan-amount">₹1 Lakh – ₹2 Crore</div>
@@ -1715,7 +1736,7 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
       </div>
       <a href="#apply" class="btn-apply-card">Apply Now →</a>
     </div>
-    <div class="loan-card" id="vehicle-loan">
+    <div class="loan-card" id="vehicle-loan" data-cat="personal">
       <div class="loan-icon">🚗</div>
       <div class="loan-name">Vehicle Loan</div>
       <div class="loan-amount">₹50,000 – ₹50 Lakh</div>
@@ -1730,7 +1751,7 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
       </div>
       <a href="#apply" class="btn-apply-card">Apply Now →</a>
     </div>
-    <div class="loan-card" id="education-loan">
+    <div class="loan-card" id="education-loan" data-cat="personal">
       <div class="loan-icon">🎓</div>
       <div class="loan-name">Education Loan</div>
       <div class="loan-amount">₹50,000 – ₹75 Lakh</div>
@@ -1745,7 +1766,7 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
       </div>
       <a href="#apply" class="btn-apply-card">Apply Now →</a>
     </div>
-    <div class="loan-card" id="gold-loan-card">
+    <div class="loan-card" id="gold-loan-card" data-cat="gold">
       <div class="loan-icon">🪙</div>
       <div class="loan-name">Gold Loan</div>
       <div class="loan-amount">₹10,000 – ₹1 Crore</div>
@@ -1760,7 +1781,7 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
       </div>
       <a href="#apply" class="btn-apply-card">Apply Now →</a>
     </div>
-    <div class="loan-card" id="working-capital-loan">
+    <div class="loan-card" id="working-capital-loan" data-cat="business">
       <div class="loan-icon">⚡</div>
       <div class="loan-name">Working Capital Loan</div>
       <div class="loan-amount">₹1 Lakh – ₹5 Crore</div>
@@ -4444,5 +4465,7 @@ function checkRDStatus() {
 })();
 </script>
 <script>function toggleDD(b){var li=b.closest(".nav-dd"),o=li.classList.toggle("open");b.setAttribute("aria-expanded",o)}document.addEventListener("click",function(e){document.querySelectorAll(".nav-dd.open").forEach(function(l){if(!l.contains(e.target))l.classList.remove("open")})});document.addEventListener("keydown",function(e){if(e.key==="Escape")document.querySelectorAll(".nav-dd.open").forEach(function(l){l.classList.remove("open")})});</script>
+<script>(function(){var p=document.getElementById('scrollProg'),t=document.getElementById('toTop'),tk=false;function u(){var h=document.documentElement,m=h.scrollHeight-innerHeight;p.style.transform='scaleX('+(m>0?Math.min(1,scrollY/m):0)+')';t.classList.toggle('show',scrollY>900);tk=false}addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(u)}},{passive:true});u();
+document.querySelectorAll('.loan-filter button').forEach(function(b){b.addEventListener('click',function(){var c=b.dataset.cat;document.querySelectorAll('.loan-filter button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});document.querySelectorAll('.loans-grid .loan-card').forEach(function(card){card.classList.toggle('hide',c!=='all'&&card.dataset.cat!==c)})})})})();</script>
 </body>
 </html>
