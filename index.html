@@ -1376,7 +1376,6 @@ a[href^="tel:"],a[href^="mailto:"]{display:inline-block;min-height:24px;line-hei
 .mobile-menu a.sub{padding-left:26px;font-size:.82rem;opacity:.9}
 .loan-card:target,#gold-loan-card:target{box-shadow:0 0 0 3px #f0c040,0 18px 40px rgba(26,39,68,.18)}
 .loan-card{scroll-margin-top:90px}
-#scrollProg{position:fixed;top:0;left:0;height:3px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:linear-gradient(90deg,#f0c040,#d4a017);z-index:2000;pointer-events:none}
 #toTop{position:fixed;right:18px;bottom:150px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(212,160,23,.6);background:#1a2744;color:#f0c040;font-size:1.1rem;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:990;box-shadow:0 8px 20px rgba(0,0,0,.3)}
 #toTop.show{opacity:1;visibility:visible;transform:none}
 .loan-filter{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 auto 26px}
@@ -1392,7 +1391,18 @@ a[href^="tel:"],a[href^="mailto:"]{display:inline-block;min-height:24px;line-hei
  #toTop{bottom:80px;right:12px}
  body{padding-bottom:68px}
 }
-@media print{#actionBar,#toTop,#scrollProg{display:none}}
+@media print{#actionBar,#toTop,}
+
+.ferr{color:#b91c1c;font-size:.74rem;margin-top:4px;line-height:1.35;font-weight:500}
+input[aria-invalid="true"],select[aria-invalid="true"]{border-color:#dc2626!important;box-shadow:0 0 0 3px rgba(220,38,38,.12)!important}
+.consent-row{display:flex;gap:10px;align-items:flex-start;margin:6px 0 14px;font-size:.76rem;line-height:1.55;color:var(--gray,#4b5563)}
+.consent-row input{margin-top:3px;width:17px;height:17px;flex:none}
+.consent-row a{color:var(--teal,#1a6b6b);font-weight:600}
+.grv{background:rgba(255,255,255,.06);border:1px solid rgba(212,160,23,.3);border-radius:16px;padding:18px 20px;margin:0 4% 0;font-size:.74rem;line-height:1.7;color:rgba(255,255,255,.82)}
+.grv b{color:#f0c040}.grv a{color:#f0c040}
+.grv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px 28px}
+.track-result .status-badge.status-info{background:#e0f2fe;color:#075985}
+.file-hint{font-size:.74rem;line-height:1.55;color:var(--gray,#4b5563);background:rgba(26,107,107,.07);border-left:3px solid var(--gold,#d4a017);border-radius:8px;padding:9px 12px;margin:2px 0 12px}
 </style>
 <meta name="geo.country" content="IN"><meta name="rating" content="general"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable summary"><link rel="author" href="/humans.txt">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "@id": "https://www.pratishtha.pro/#service-business-loan", "name": "Business Loan", "serviceType": "Business Loan", "description": "Business loans for working capital, expansion and equipment, ₹10,000 to ₹5 Crore, via 116+ bank and NBFC partners.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-personal-loan", "name": "Personal Loan", "serviceType": "Personal Loan", "description": "Personal loans for medical, wedding, travel and other needs, with simple documentation.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-home-loan", "name": "Home Loan", "serviceType": "Home Loan", "description": "Home loans for purchase, construction and renovation from leading banks and housing finance companies.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-loan-against-property", "name": "Loan Against Property", "serviceType": "Loan Against Property", "description": "Loan against property (LAP) for business and personal funding at competitive rates.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-msme-loan", "name": "MSME Loan", "serviceType": "MSME Loan", "description": "MSME loans for small and medium businesses, indicative rates from 7.35% p.a.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-vehicle-loan", "name": "Vehicle Loan", "serviceType": "Vehicle Loan", "description": "Car, two-wheeler and commercial vehicle loans.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-education-loan", "name": "Education Loan", "serviceType": "Education Loan", "description": "Education loans for studies in India and abroad.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#loans", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-gold-loan", "name": "Gold Loan", "serviceType": "Gold Loan", "description": "Gold loan from ₹10,000 up to ₹1 Crore, up to 75% of gold value, from 9.00% p.a.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#gold-loan", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}, {"@type": "Service", "@id": "https://www.pratishtha.pro/#service-pfs-emi-card", "name": "PFS EMI Card", "serviceType": "PFS EMI Card", "description": "Virtual PFS Shopping Card (not a credit card): emergency loan up to ₹5,000, shopping on EMI and loan payment, subject to lending-partner approval.", "provider": {"@id": "https://www.pratishtha.pro/#organization"}, "areaServed": {"@type": "Country", "name": "India"}, "url": "https://www.pratishtha.pro/#pfs-card", "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.pratishtha.pro/#apply", "servicePhone": "+91 7233023547"}}]}</script>
@@ -1418,7 +1428,6 @@ a[href^="tel:"],a[href^="mailto:"]{display:inline-block;min-height:24px;line-hei
   </defs>
 </svg>
 
-<div id="scrollProg" aria-hidden="true"></div>
 <button id="toTop" type="button" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <div id="actionBar" role="navigation" aria-label="Quick actions"><a href="tel:+917233023547">📞 Call</a><a class="wa" href="https://wa.me/917233023547?text=Namaste!%20Mujhe%20loan%20chahiye" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a><a class="ap" href="#apply">📝 Apply</a></div>
 <!-- WA FLOAT -->
@@ -2022,6 +2031,8 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
           <div class="file-input-wrap"><input type="file" id="applyPAN" accept=".pdf,.jpg,.jpeg,.png" aria-label="Upload PAN card (PDF or image)"></div>
         </div>
       </div>
+      <p class="file-hint" id="applyFileHint">📎 Photos/documents go with your details on WhatsApp: on your phone, tap the button, choose <b>WhatsApp</b> and select our number <b>+91 7233023547</b> (save it as “Pratishtha Finance”). On a computer, attach the files in the chat that opens. Max 5 MB each.</p>
+      <label class="consent-row" for="applyConsent"><input type="checkbox" id="applyConsent"><span>I agree that Pratishtha Finance Services may contact me by call/WhatsApp about my loan request and share my details with its lending partners. I have read the <a href="#" onclick="openModal('privacy');return false;">Privacy Policy</a>.</span></label>
       <button class="btn-submit" id="submitBtn" onclick="submitForm()">🚀 Apply Now – Free!</button>
       <a href="https://wa.me/917233023547?text=Namaste!%20Mujhe%20loan%20apply%20karna%20hai" class="whatsapp-link" target="_blank" rel="noopener noreferrer">💬 Or Apply via WhatsApp</a>
     </div>
@@ -3541,7 +3552,8 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
       <label for="partnerDeclare" style="margin-bottom:0;font-weight:400;font-size:0.76rem;color:var(--gray);">Main confirm karta/karti hoon ki upar di gayi jaankari sahi hai aur main Pratishtha Finance Services ke terms se sehmat hoon.</label>
     </div>
 
-    <button class="btn-submit" id="partnerSubmitBtn" onclick="submitPartnerForm()">🚀 Submit Application</button>
+    <p class="file-hint" id="partnerFileHint">📎 Photos/documents go with your details on WhatsApp: on your phone, tap the button, choose <b>WhatsApp</b> and select our number <b>+91 7233023547</b> (save it as “Pratishtha Finance”). On a computer, attach the files in the chat that opens. Max 5 MB each.</p>
+      <button class="btn-submit" id="partnerSubmitBtn" onclick="submitPartnerForm()">🚀 Submit Application</button>
     <a href="https://wa.me/917233023547?text=Mujhe%20Partner%20banna%20hai" class="whatsapp-link" target="_blank" rel="noopener noreferrer">💬 Or Apply via WhatsApp</a>
     <p style="font-size:0.68rem;color:var(--gray);margin-top:12px;margin-bottom:0;text-align:center;">Note: Attach photo/documents separately when sending on WhatsApp — the chat will open as soon as you submit the form.</p>
   </div>
@@ -3679,7 +3691,7 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
   <div class="trust-grid">
     <div class="trust-card"><div class="trust-icon">🏛️</div><div class="trust-title" data-i18n="trust.c1t">MSME Registered</div><div class="trust-desc" data-i18n="trust.c1d">Ministry of MSME, Govt. of India ke saath registered firm.</div></div>
     <div class="trust-card"><div class="trust-icon">🪪</div><div class="trust-title" data-i18n="trust.c2t">PAN Verified</div><div class="trust-desc" data-i18n="trust.c2d">Legally verified business entity with valid PAN.</div></div>
-    <div class="trust-card"><div class="trust-icon">🔒</div><div class="trust-title" data-i18n="trust.c3t">100% Secure</div><div class="trust-desc" data-i18n="trust.c3d">Your data stays fully encrypted and secure.</div></div>
+    <div class="trust-card"><div class="trust-icon">🔒</div><div class="trust-title" data-i18n="trust.c3t">Your Data, Your Consent</div><div class="trust-desc" data-i18n="trust.c3d">We use your details only to process your loan request, with your consent.</div></div>
     <div class="trust-card"><div class="trust-icon">🏦</div><div class="trust-title" data-i18n="trust.c4t">116+ Partners</div><div class="trust-desc" data-i18n="trust.c4d">Leading banks aur NBFCs ke authorized partner.</div></div>
     <div class="trust-card"><div class="trust-icon">✅</div><div class="trust-title" data-i18n="trust.c5t">No Hidden Charges</div><div class="trust-desc" data-i18n="trust.c5d">Transparent process – koi chhupa hua charge nahi.</div></div>
     <div class="trust-card"><div class="trust-icon">⚡</div><div class="trust-title" data-i18n="trust.c6t">Fast Processing</div><div class="trust-desc" data-i18n="trust.c6d">24-48 ghante mein loan decision guarantee.</div></div>
@@ -3789,7 +3801,15 @@ Whether you need a Business Loan, Personal Loan, Home Loan, Loan Against Propert
       <a href="#knowledge">Knowledge Center</a>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="grv" id="grievance" role="region" aria-label="Disclosures and grievance redressal">
+  <div class="grv-grid">
+    <div><b>Disclosure.</b> Pratishtha Finance Services is an MSME-registered loan facilitation firm. It is not a bank or NBFC and does not itself lend. Loans are sanctioned and disbursed by our bank/NBFC lending partners; approval, amount, rate and tenure are decided by them and depend on eligibility, credit profile and their policy. Rates shown are indicative.</div>
+    <div><b>Stay safe.</b> We never ask for OTP, PIN, CVV, passwords or any advance payment to “release” a loan. Pay only to the lender’s official account, against a written receipt. Do not share these details with anyone claiming to be from us.</div>
+    <div><b>Grievance redressal.</b> Write to <a href="mailto:pratishthafinance@gmail.com">pratishthafinance@gmail.com</a> or call <a href="tel:+917233023547">+91 7233023547</a> (Mon–Sat, 9 AM–7 PM) with your name, mobile number and details of the complaint. If you are not satisfied with the lender’s response, you can escalate to the lender’s grievance officer and then to the RBI Complaint Management System at <a href="https://cms.rbi.org.in" target="_blank" rel="noopener noreferrer">cms.rbi.org.in</a>.</div>
+    <div><b>Your data.</b> Details you submit are sent to our team on WhatsApp and used only to process your loan request, with your consent. See our <a href="#" onclick="openModal('privacy');return false;">Privacy Policy</a>. Avoid sending full Aadhaar/PAN images in public or shared chats.</div>
+  </div>
+</div>
+<div class="footer-bottom">
     <span>© 2026 Pratishtha Finance Services. Karan Gautam, Founder. All rights reserved.</span>
     <span>Reg: Ministry of MSME, Govt. of India</span>
     <span style="display:inline-flex;align-items:center;gap:7px;">Developed by
@@ -3874,8 +3894,8 @@ function checkEligibility() {
   if (age >= 21 && age <= 60 && income >= 15000) {
     res.classList.add('eligible');
     document.getElementById('eligIcon').textContent = '✅';
-    document.getElementById('eligTitle').textContent = 'You Are Eligible!';
-    document.getElementById('eligMsg').innerHTML = `Congratulations! You are eligible for a <strong>${loanType}</strong>. Our expert will offer you the best rate and terms. <br><br><a href="#apply" style="color:var(--teal);font-weight:700;">Apply Now →</a>`;
+    document.getElementById('eligTitle').textContent = 'You May Be Eligible';
+    document.getElementById('eligMsg').innerHTML = `Based on your inputs you may be eligible for a <strong>${loanType}</strong>. Our expert will offer you the best rate and terms. <br><br><a href="#apply" style="color:var(--teal);font-weight:700;">Apply Now →</a>`;
   } else if (age >= 18 && income >= 8000) {
     res.classList.add('conditional');
     document.getElementById('eligIcon').textContent = '⚠️';
@@ -4010,10 +4030,10 @@ const translations = {
     'trust.label': 'Trust &amp; Compliance', 'trust.title': 'Why Trust Us?',
     'trust.c1t': 'MSME Registered', 'trust.c1d': 'Registered firm with Ministry of MSME, Govt. of India.',
     'trust.c2t': 'PAN Verified', 'trust.c2d': 'Legally verified business entity with valid PAN.',
-    'trust.c3t': '100% Secure', 'trust.c3d': 'Your data stays fully encrypted and secure.',
+    'trust.c3t': 'Your Data, Your Consent', 'trust.c3d': 'We use your details only to process your loan request, with your consent.',
     'trust.c4t': '116+ Partners', 'trust.c4d': 'Authorized Partner for leading banks and NBFCs.',
     'trust.c5t': 'No Hidden Charges', 'trust.c5d': 'Transparent process – no hidden charges at all.',
-    'trust.c6t': 'Fast Processing', 'trust.c6d': 'Guaranteed loan decision within 24-48 hours.',
+    'trust.c6t': 'Fast Processing', 'trust.c6d': 'Quick processing – decision time depends on the lender.',
     'contact.label': 'Contact Us', 'contact.title': 'Talk to Us<br>Today',
     'join.label': 'Join Us', 'join.title': 'Become a Partner',
     'join.sub': 'Earn income from home. Refer loans, get commission. Zero investment required!',
@@ -4061,10 +4081,10 @@ const translations = {
     'trust.label': 'विश्वास और अनुपालन', 'trust.title': 'हम पर भरोसा क्यों करें?',
     'trust.c1t': 'MSME रजिस्टर्ड', 'trust.c1d': 'MSME मंत्रालय, भारत सरकार के साथ पंजीकृत फर्म।',
     'trust.c2t': 'PAN सत्यापित', 'trust.c2d': 'वैध PAN के साथ कानूनी रूप से सत्यापित व्यावसायिक इकाई।',
-    'trust.c3t': '100% सुरक्षित', 'trust.c3d': 'आपका डेटा पूरी तरह एन्क्रिप्टेड और सुरक्षित रहता है।',
+    'trust.c3t': 'आपका डेटा, आपकी सहमति', 'trust.c3d': 'आपकी जानकारी का उपयोग केवल आपके लोन अनुरोध के लिए, आपकी सहमति से किया जाता है।',
     'trust.c4t': '116+ पार्टनर्स', 'trust.c4d': 'प्रमुख बैंकों और NBFC के अधिकृत पार्टनर।',
     'trust.c5t': 'कोई छिपा शुल्क नहीं', 'trust.c5d': 'पारदर्शी प्रक्रिया – कोई छिपा हुआ चार्ज नहीं।',
-    'trust.c6t': 'तेज़ प्रक्रिया', 'trust.c6d': '24-48 घंटों में लोन निर्णय की गारंटी।',
+    'trust.c6t': 'तेज़ प्रक्रिया', 'trust.c6d': 'तेज़ प्रोसेसिंग – निर्णय का समय लेंडर पर निर्भर करता है।',
     'contact.label': 'संपर्क करें', 'contact.title': 'आज ही हमसे<br>बात करें',
     'join.label': 'जुड़ें', 'join.title': 'पार्टनर बनें',
     'join.sub': 'घर बैठे आय कमाएं। लोन रेफर करें, कमीशन पाएं। शून्य निवेश की आवश्यकता!',
@@ -4465,7 +4485,90 @@ function checkRDStatus() {
 })();
 </script>
 <script>function toggleDD(b){var li=b.closest(".nav-dd"),o=li.classList.toggle("open");b.setAttribute("aria-expanded",o)}document.addEventListener("click",function(e){document.querySelectorAll(".nav-dd.open").forEach(function(l){if(!l.contains(e.target))l.classList.remove("open")})});document.addEventListener("keydown",function(e){if(e.key==="Escape")document.querySelectorAll(".nav-dd.open").forEach(function(l){l.classList.remove("open")})});</script>
-<script>(function(){var p=document.getElementById('scrollProg'),t=document.getElementById('toTop'),tk=false;function u(){var h=document.documentElement,m=h.scrollHeight-innerHeight;p.style.transform='scaleX('+(m>0?Math.min(1,scrollY/m):0)+')';t.classList.toggle('show',scrollY>900);tk=false}addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(u)}},{passive:true});u();
+<script>(function(){var t=document.getElementById('toTop'),tk=false;function u(){var h=document.documentElement,m=h.scrollHeight-innerHeight;t.classList.toggle('show',scrollY>900);tk=false}addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(u)}},{passive:true});u();
 document.querySelectorAll('.loan-filter button').forEach(function(b){b.addEventListener('click',function(){var c=b.dataset.cat;document.querySelectorAll('.loan-filter button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});document.querySelectorAll('.loans-grid .loan-card').forEach(function(card){card.classList.toggle('hide',c!=='all'&&card.dataset.cat!==c)})})})})();</script>
+<script>
+(function(){
+var $=function(id){return document.getElementById(id)};
+function digits(v){return String(v||'').replace(/\D/g,'')}
+function mobile(v){var d=digits(v);if(d.length===12&&d.slice(0,2)==='91')d=d.slice(2);if(d.length===11&&d[0]==='0')d=d.slice(1);return d}
+function okMobile(v){return /^[6-9]\d{9}$/.test(mobile(v))}
+function clr(el){el.removeAttribute('aria-invalid');var n=document.querySelector('.ferr[data-for="'+el.id+'"]');if(n)n.remove()}
+function bad(id,msg,list){var el=$(id);if(!el)return;el.setAttribute('aria-invalid','true');var n=document.querySelector('.ferr[data-for="'+id+'"]');if(!n){n=document.createElement('div');n.className='ferr';n.setAttribute('role','alert');n.dataset.for=id;(el.type==='checkbox'&&el.closest('label')?el.closest('label'):el).insertAdjacentElement('afterend',n)}n.textContent=msg;list.push(el)}
+function fin(list){if(list.length){list[0].focus({preventScroll:false});if(window.showToast)showToast('⚠️ Please correct the highlighted fields.','error');return false}return true}
+document.addEventListener('input',function(e){if(e.target.getAttribute&&e.target.getAttribute('aria-invalid'))clr(e.target)});
+document.addEventListener('change',function(e){if(e.target.getAttribute&&e.target.getAttribute('aria-invalid'))clr(e.target)});
+function name(id,l,label){var v=$(id).value.trim();if(v.length<2||!/[A-Za-zऀ-ॿ]/.test(v)||/\d{3,}/.test(v))bad(id,'Enter your full name.',l)}
+function mob(id,l,req){var v=$(id).value.trim();if(!v&&!req)return;if(!okMobile(v))bad(id,'Enter a valid 10-digit Indian mobile number (starts with 6–9).',l)}
+function normAll(ids){ids.forEach(function(i){var e=$(i);if(e&&e.value.trim()&&okMobile(e.value))e.value=mobile(e.value)})}
+function files(ids,l){ids.forEach(function(i){var e=$(i);if(!e||!e.files||!e.files[0])return;var f=e.files[0];if(f.size>5*1024*1024)bad(i,'File is larger than 5 MB.',l);else if(!/\.(pdf|jpe?g|png)$/i.test(f.name))bad(i,'Only PDF, JPG or PNG allowed.',l)})}
+function wrap(fn,validate){var o=window[fn];if(typeof o!=='function')return;window[fn]=function(){var l=[];validate(l);if(!fin(l))return;return o.apply(this,arguments)}}
+
+wrap('submitForm',function(l){
+ name('applyName',l);mob('applyPhone',l,true);mob('applyWA',l,false);
+ var a=$('applyAmount').value.trim();if(!a)bad('applyAmount','Enter the loan amount you need.',l);else{var n=parseFloat(a.replace(/[^\d.]/g,''));if(!n||n<10000)bad('applyAmount','Minimum loan amount is ₹10,000.',l);else if(n>50000000)bad('applyAmount','Maximum is ₹5 Crore.',l)}
+ if(!$('applyLoanType').value)bad('applyLoanType','Select a loan type.',l);
+ if(!$('applyConsent').checked)bad('applyConsent','Please give your consent to proceed.',l);
+ files(['applyAadhaar','applyPAN'],l);if(!l.length)normAll(['applyPhone','applyWA']);
+});
+wrap('submitPartnerForm',function(l){
+ name('partnerName',l);mob('partnerPhone',l,true);mob('partnerWA',l,false);
+ var a=$('partnerAge').value;if(a&&(a<18||a>70))bad('partnerAge','Age must be between 18 and 70.',l);
+ if(!$('partnerDistrict').value.trim())bad('partnerDistrict','Enter your district.',l);
+ files(['partnerPhoto','partnerAadhaar','partnerPAN','partnerOtherDoc'],l);if(!l.length)normAll(['partnerPhone','partnerWA']);
+});
+(function(){var o=window.enrollRD;if(typeof o!=='function')return;window.enrollRD=function(){var l=[];
+ name('rdName',l);mob('rdPhone',l,true);mob('rdWA',l,false);
+ var a=$('rdAge').value;if(a&&(a<18||a>70))bad('rdAge','Age must be between 18 and 70.',l);
+ var amt=parseFloat($('rdEnrollAmount').value);if(!amt||amt<50)bad('rdEnrollAmount','Minimum saving is ₹50.',l);
+ var ad=digits($('rdAadhaar').value);if($('rdAadhaar').value.trim()&&ad.length!==12)bad('rdAadhaar','Aadhaar must have 12 digits.',l);
+ var pn=$('rdPAN').value.trim().toUpperCase();if(pn&&!/^[A-Z]{5}\d{4}[A-Z]$/.test(pn))bad('rdPAN','PAN format: ABCDE1234F.',l);
+ if(!fin(l))return;normAll(['rdPhone','rdWA']);$('rdPAN').value=pn;
+ var ae=$('rdAadhaar'),av=ae.value,pv=pn;
+ if(ad.length===12)ae.value='XXXX XXXX '+ad.slice(8);
+ if(pn)$('rdPAN').value=pn.slice(0,2)+'XXXX'+pn.slice(6,9)+pn.slice(9);
+ try{return o.apply(this,arguments)}finally{ae.value=av;$('rdPAN').value=pv}}})();
+wrap('trackApplication',function(l){mob('trackPhone',l,true)});
+wrap('checkRDStatus',function(l){mob('rdStatusPhone',l,true)});
+wrap('checkEligibility',function(l){var a=parseInt($('eligAge').value),i=parseInt($('eligIncome').value);
+ if(!a||a<18||a>70)bad('eligAge','Age must be between 18 and 70.',l);if(!i||i<1000)bad('eligIncome','Enter your monthly income in ₹.',l)});
+// honest tracking (no fake status)
+window.trackApplication=(function(prev){return function(){var l=[];mob('trackPhone',l,true);if(!fin(l))return;var id=$('trackId').value.trim(),ph=mobile($('trackPhone').value);
+ $('trackResult').style.display='block';var b=$('trackStatus');b.textContent='Check on WhatsApp';b.className='status-badge status-info';
+ $('trackMsg').innerHTML='Application ID: <strong></strong><br>Mobile: <strong></strong><br><br>Live status is shared by our team on WhatsApp after verifying your details. Tap the button below to message us with these details.';
+ var s=$('trackMsg').querySelectorAll('strong');s[0].textContent=id||'N/A';s[1].textContent=ph;
+ var a=$('trackResult').querySelector('a[href*="wa.me"]');if(a)a.href='https://wa.me/917233023547?text='+encodeURIComponent('Hi! I want to check my loan application status.\nApplication ID: '+(id||'N/A')+'\nMobile: '+ph)}})();
+// input hygiene
+var at={applyName:['name','name'],applyPhone:['tel','tel'],applyWA:['tel','tel'],applyCity:['address-level2'],rdName:['name'],rdPhone:['tel'],rdWA:['tel'],rdCity:['address-level2'],rdDistrict:['address-level1'],partnerName:['name'],partnerPhone:['tel'],partnerWA:['tel'],partnerCity:['address-level2'],trackPhone:['tel'],rdStatusPhone:['tel']};
+Object.keys(at).forEach(function(k){var e=$(k);if(e)e.setAttribute('autocomplete',at[k][0])});
+['applyPhone','applyWA','trackPhone','rdStatusPhone','rdWA'].forEach(function(k){var e=$(k);if(e){e.setAttribute('inputmode','numeric');e.setAttribute('maxlength','18')}});
+['rdPhone','partnerPhone','partnerWA'].forEach(function(k){var e=$(k);if(e){e.setAttribute('inputmode','numeric');e.setAttribute('maxlength','18')}});
+['applyAmount'].forEach(function(k){var e=$(k);if(e)e.setAttribute('inputmode','numeric')});
+[['applyName',60],['rdName',60],['partnerName',60]].forEach(function(p){var e=$(p[0]);if(e)e.setAttribute('maxlength',p[1])});
+[['applyPhone','Mobile number'],['applyWA','WhatsApp number']].forEach(function(p){var e=$(p[0]);if(e&&!e.getAttribute('aria-label')&&!document.querySelector('label[for="'+p[0]+'"]'))e.setAttribute('aria-label',p[1])});
+['rdAadhaar','rdPAN'].forEach(function(k){var e=$(k);if(e)e.setAttribute('autocomplete','off')});
+})();
+</script>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+function pick(ids){var a=[];ids.forEach(function(i){var e=$(i);if(e&&e.files&&e.files[0])a.push(e.files[0])});return a}
+function layer(fn,ids){var o=window[fn];if(typeof o!=='function')return;
+ window[fn]=function(){
+  var files=pick(ids);
+  if(!files.length||!navigator.share||!navigator.canShare)return o.apply(this,arguments);
+  var cap=null,ow=window.open;window.open=function(u){cap=u;return null};
+  try{o.apply(this,arguments)}finally{window.open=ow}
+  if(!cap)return;
+  var m=cap.split('text='),text=m[1]?decodeURIComponent(m[1]):'';
+  var data={title:'Pratishtha Finance Services',text:text+'\n\n(Documents attached)',files:files};
+  if(!navigator.canShare(data)){window.open(cap,'_blank');return}
+  navigator.share(data).then(function(){if(window.showToast)showToast('✅ Shared! Details and documents sent via WhatsApp.','success')})
+   .catch(function(e){if(e&&e.name==='AbortError')return;window.open(cap,'_blank')});
+ }}
+layer('submitForm',['applyAadhaar','applyPAN']);
+layer('submitPartnerForm',['partnerPhoto','partnerAadhaar','partnerPAN','partnerOtherDoc']);
+})();
+</script>
 </body>
 </html>
