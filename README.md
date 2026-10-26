@@ -78,7 +78,7 @@ Internally, the single file is organized as:
   <section id="partners">  116+ bank/NBFC logos, filterable
   <section id="join">      Associate / referral / branch partner signup
   <section id="reviews">
-  <section id="faq">       29 Q&As
+  <section id="faq">       33 Q&As
   <section id="knowledge">
   <section id="trust">
   <section id="contact">
@@ -127,7 +127,7 @@ Internally, the single file is organized as:
 | `#partners` | Bank/NBFC partner directory, filterable |
 | `#join` | Become an associate / referral / branch partner |
 | `#reviews` | Customer reviews |
-| `#faq` | 29 FAQs (also exposed as structured data) |
+| `#faq` | 33 FAQs (also exposed as structured data) |
 | `#knowledge` | Financial literacy content |
 | `#trust` | Trust signals / disclaimers |
 | `#contact` | Phone, WhatsApp, email, address, map |
@@ -150,7 +150,7 @@ The `translations` object plus `setLanguage(lang)` swap all UI copy between Engl
 ## SEO & Discoverability
 
 - Full metadata: `<title>`, meta description/keywords, canonical URL, `hreflang` (en/hi/x-default), Open Graph, Twitter Card
-- Structured data (JSON-LD): `FinancialService`, `BreadcrumbList`, and a **static** `FAQPage` (29 entries) — deliberately kept static rather than JS-injected so crawlers that don't execute JavaScript can still read it
+- Structured data (JSON-LD): `FinancialService`, `BreadcrumbList`, and a **static** `FAQPage` (33 entries) — deliberately kept static rather than JS-injected so crawlers that don't execute JavaScript can still read it
 - AI-crawler access explicitly permitted: GPTBot (ChatGPT), Google-Extended (Gemini), PerplexityBot, ClaudeBot, CCBot
 - `llms.txt` reference block for AI-assistant discoverability
 
@@ -220,3 +220,7 @@ Serves customers **all over India**, with **Purvanchal** (Gorakhpur, Maharajganj
 **Bug fix** — Partner-logo `onerror` fallback handlers referenced `this.nextSibling`, which resolves to a whitespace text node (not the fallback `<div>`) due to the newline between tags in source. This threw `Cannot set properties of undefined (setting 'display')` on every logo load failure, across all 114 logo `<img>` tags. Fixed by switching to `this.nextElementSibling`, which correctly skips text nodes and targets the fallback element.
 
 **Pro build** — real card artwork, Service Areas section, OG image, favicons/manifest, `.htaccess` (https + www redirect, gzip, caching, security headers), 404 page, IndexNow key, accessibility pass (labels, landmarks, contrast, keyboard FAQ). Lighthouse: Performance 94, Accessibility ~98, Best Practices 96, SEO 100.
+
+**Insurance, forms and compliance** — Insurance section (health, term life, motor, loan protection, business, accident, savings/pension, home) with IRDAI-registered-insurer wording; Loan Products dropdown; mobile action bar, loan filter, back-to-top; validated forms with consent, masked Aadhaar/PAN, WhatsApp share with attached documents (Web Share API, falls back to text chat); disclosures and grievance block; per-service JSON-LD, llms-full.txt, security.txt, humans.txt. Lighthouse: Accessibility 100, Best Practices 96, SEO 100, Performance ~87–94 (varies by run).
+
+**Before launch:** add IRDAI registration details if you sell insurance, confirm grievance contact/response time, add Search Console and Bing verification codes, add social profile URLs to `sameAs`.
